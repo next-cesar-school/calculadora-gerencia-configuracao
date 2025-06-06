@@ -13,13 +13,17 @@ if __name__ == "__main__":
 
         if operador == '+':
             resultado = soma(num1, num2)
-        else:
-            resultado = "Operador inválido."
-            
         if operador == '/':
             if num2 == '0':
                 print("Não dividirás por zero!")
             else:
                 resultado = soma(num1, num2)
+        else:
+            resultado = "Operador inválido."
 
         print(f"Resultado: {resultado}")
+        
+    except ValueError:
+        print("Entrada inválida. Por favor, digite números.")
+    except Exception as e:
+        print(f"Ocorreu um erro: {e}")
