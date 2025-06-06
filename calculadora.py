@@ -1,5 +1,7 @@
 def soma(a, b):
     return a + b
+def divi(a, b):
+    return a/b
 
 if __name__ == "__main__":
     print("--- Calculadora Simples ---")
@@ -7,12 +9,18 @@ if __name__ == "__main__":
     try:
         num1 = float(input("Digite o primeiro número: "))
         num2 = float(input("Digite o segundo número: "))
-        operador = input("Digite o operador (+): ")
+        operador = input("Digite o operador (+, /): ")
 
         if operador == '+':
             resultado = soma(num1, num2)
         else:
             resultado = "Operador inválido."
+            
+        if operador == '/':
+            if num2 == '0':
+                print("Não dividirás por zero!")
+            else:
+                resultado = soma(num1, num2)
 
         print(f"Resultado: {resultado}")
 
