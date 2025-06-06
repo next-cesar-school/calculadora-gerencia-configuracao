@@ -17,7 +17,7 @@ if __name__ == "__main__":
             if num2 == '0':
                 print("Não dividirás por zero!")
             else:
-                resultado = soma(num1, num2)
+                resultado = divi(num1, num2)
         else:
             resultado = "Operador inválido."
 
